@@ -1,3 +1,52 @@
-.features{
-  padding: 7rem 0;
+section.hero{
+  background: url(../img/hero.jpg) no-repeat center center;
+  background-size: cover;
+
+  .hero-cta{
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    color: $white;
+    background: url(../img/hero-cta-bg.png) no-repeat;
+
+    @include media-breakpoint-up(md){
+      width: 520px;
+      height: 421px;
+    }
+  }
+}
+
+section.app{
+  position: relative;
+  background-color: $primary;
+  color: $white;
+
+  .container{
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before,
+  &:after{
+    content: '';
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 290px;
+    height: 337px;
+    
+    @include media-breakpoint-up(md){
+      display: block;
+    }
+  }
+
+  &:before{
+    left: 0;
+    background: url(../img/decoration-l.png) no-repeat;
+  }
+
+  &:after{
+    right: 0;
+    background: url(../img/decoration-r.png) no-repeat;
+  }
 }

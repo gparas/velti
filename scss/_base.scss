@@ -11,6 +11,10 @@
   }
 }
 
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -28,4 +32,9 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }

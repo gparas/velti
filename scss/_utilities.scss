@@ -1,3 +1,9 @@
+// Text Size
+
+.text-lead{
+  font-size: 1.5rem;
+}
+
 // Text alignment
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -38,24 +44,24 @@
         }
       }
     }
-
-    // Some special margin utils
-    .m#{$infix}-auto { margin: auto !important; }
-    .mt#{$infix}-auto,
-    .my#{$infix}-auto {
-      margin-top: auto !important;
-    }
-    .mr#{$infix}-auto,
-    .mx#{$infix}-auto {
-      margin-right: auto !important;
-    }
-    .mb#{$infix}-auto,
-    .my#{$infix}-auto {
-      margin-bottom: auto !important;
-    }
-    .ml#{$infix}-auto,
-    .mx#{$infix}-auto {
-      margin-left: auto !important;
-    }
   }
+}
+
+
+// Display
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none         { display: none !important; }
+    .d#{$infix}-inline-block { display: inline-block !important; }
+    .d#{$infix}-block        { display: block !important; }
+  }
+}
+
+// Flex utilities
+
+.align-items-center{
+  @include align-items(center);
 }
