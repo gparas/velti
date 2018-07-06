@@ -1,0 +1,26 @@
+.container{
+  @include make-container();
+  max-width: 1120px + $grid-gutter-width;
+}
+
+// grid
+
+.grid {
+  @include flexbox;
+  @include flex-direction(column);
+
+
+  @include media-breakpoint-up(md) {
+    @include flex-flow(row wrap);
+    margin-right: -($grid-gutter-width / 2);
+    margin-left: -($grid-gutter-width / 2);
+
+    .grid-col {
+      @include flexbox;
+      @include flex(1 0 0%);
+      @include flex-direction(column);
+      margin-right: ($grid-gutter-width / 2);
+      margin-left: ($grid-gutter-width / 2);
+    }
+  }
+}

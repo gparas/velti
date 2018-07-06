@@ -1,0 +1,27 @@
+.navbar{
+  position: relative;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  background-color: $dark;
+  padding: 1rem 0;
+
+  > .container {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+  }
+}
+
+.navbar-brand{
+  @include flexbox;
+  line-height: inherit;
+  white-space: nowrap;
+  color: $primary;
+}
+
+.navbar-toggler{
+  @include flexbox;
+  margin-left: auto;
+  color: $white;
+}
