@@ -1,0 +1,22 @@
+---
+---
+{
+  "name": "velti",
+  "short_name": "velti",
+  "icons": [
+    {
+      "src": "./img/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#2cb7b2",
+  "background_color": "#2cb7b2",
+  "display": "standalone"
+}
